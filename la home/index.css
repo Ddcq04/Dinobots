@@ -1,0 +1,116 @@
+body {
+  margin: 0px;
+}
+
+header {
+  background-color: hsl(180, 5%, 4%);
+  width: 100;
+  height: 54px;
+}
+
+nav {
+  background-color: rgb(161, 158, 158);
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+nav ul li {
+    
+  color: #ecf0f1;
+  
+  
+  
+}
+
+nav ul :hover {
+  color: #1abc9c;
+  /* Color al pasar el mouse */
+
+}
+
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 95px);
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+
+  animation: slider 28s infinite linear;
+
+}
+
+.sld{
+  
+  width: 100%;
+  height: 100%;
+  color: rgb(237, 234, 234);
+  background-color: rgba(240, 248, 238, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(/img/1.jpg);
+  }
+
+  20% {
+    background-image: url(/img/1.jpg);
+  }
+
+  21% {
+    background-image: url(/img/2.jpg);
+  }
+
+  40% {
+    background-image: url(/img/2.jpg);
+  }
+
+  41% {
+    background-image: url(/img/3.jpg);
+  }
+
+  60% {
+    background-image: url(/img/3.jpg);
+  }
+
+  /* 61%{
+		background-image: url("../img/5.jpg");
+	}
+	80%{
+		background-image: url("../img/5.jpg");
+	}
+	
+	81%{
+		background-image: url("../img/6.jpg");
+	}
+	100%{
+		background-image: url("../img/6.jpg");
+	}	  */
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
+footer {
+  background-color: hsl(150, 42%, 35%);
+  padding: 70px;
+
+
+
+}
