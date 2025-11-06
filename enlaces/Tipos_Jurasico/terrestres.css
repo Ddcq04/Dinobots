@@ -1,3 +1,29 @@
 body {
     background-image: url("img/fondoTerrestre.jpg");
+    margin:0;
+}
+/*Encabezado*/
+header {
+    margin:0;
+    background:rgba(0, 0, 0, 0.6);
+    color:rgb(37, 159, 37);
+    text-align: center;
+    padding: 2%;
+}
+/*Contenedor de dinosaurios*/
+.contenedor-terrestres {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.info {
+    width: calc(33.333% - 14px);
+    text-align: center;
+}
+
+/* Tamaño de las imagenes */
+img[src] {
+    width: 30%;
 }
