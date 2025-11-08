@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinosaurios</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-
+        <h1>Reino Prehistórico</h1>
     </header>
 
 
@@ -19,10 +24,10 @@
         <div class="sld">
             <nav>
                 <ul>
-                    <li id="di">Epocas de Dinosaurios</li>
-                    <li id="di">Dinosaurios</li>
-                    <li id="ice">Épocas Glaciar</li>
-                    <li id="ice">Animales Prehistoricos</li>
+                    <li>Era Antigua</li>
+                    <li>Dinosaurios</li>
+                    <li>Era Glaciar</li>
+                    <li>Mamíferos</li>
                 </ul>
 
             </nav>
@@ -30,10 +35,71 @@
 
     </section>
 
-    <footer>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, porro consequatur delectus est ea dolor
-            neque? Dolores saepe nobis a aliquam, deserunt eligendi. Hic accusamus illo alias odio quas autem.</p>
 
+    <footer class="footer">
+        <div class="seccion1">
+
+            <div class="content">
+                <h2>Autores</h2>
+                <ul>
+                    <li>Erik Chuto</li>
+                    <li>Diego Chauca</li>
+                    <li>Davis Rua</li>
+                    <li>Alejandro Fernández</li>
+                </ul>
+            </div>
+
+            <!-- FORMULARIO -->
+            <div class="content">
+                <h2>Actualiza información</h2>
+                <form class="form" action="#">
+
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" placeholder="Tu nombre">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="tugmail@.com">
+
+                    <label for="message"></label>
+                    <textarea id="message" rows="3" placeholder="Cuentanos"></textarea>
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </div>
+
+
+            <div class="content">
+                <h2>Enlaces de interés</h2>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2>Suscríbete</h2>
+                <ul class="redesociales">
+                    <li><a href="https://www.facebook.com/?locale=es_ES"><img src="../img/face.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="../img/insta.png" alt="Instagram"></a></li>
+                    <li><a href="https://x.com/?lang=es"><img src="../img/x.png" alt="Twitter/X"></a></li>
+                    <li><a href="https://discord.com/login"><img src="../img/disc.png" alt="Discord"></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="seccion2">
+            <ul>
+                <li><a href="#">Aviso legal</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+            <p>© 2025 | Trabajo grupal de Desarrollo de Interfaces</p>
+        </div>
     </footer>
 </body>
 

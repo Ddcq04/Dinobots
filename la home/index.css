@@ -1,15 +1,35 @@
-body {
+* {
   margin: 0px;
+
 }
+
 
 header {
-  background-color: hsl(180, 5%, 4%);
-  width: 100;
-  height: 54px;
+  background-color: hsl(131, 44%, 27%);
+  width: 100%;
+  padding: 34px 0 34px 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  box-shadow: 34 56px 18px rgba(0, 0, 0, 0.3);
+
 }
 
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #f0f0f0;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+/*barra de navegacion*/
 nav {
-  background-color: rgb(161, 158, 158);
+  width: 70%;
+  margin-bottom: 33rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
@@ -18,26 +38,35 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 70px;
 
 }
+
 nav ul li {
-    
-  color: #ecf0f1;
-  
-  
-  
+  font-size: 29px;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.8)
 }
 
-nav ul :hover {
-  color: #1abc9c;
-  /* Color al pasar el mouse */
+nav ul li:hover {
+  background-color: hsl(130, 35%, 20%);
+  transform: scale(1.10);
+}
 
+nav ul li:active {
+  transform: scale(1.05);
 }
 
 
 .carrusel {
   position: relative;
   width: 100%;
+  margin: 0;
   height: calc(100vh - 95px);
   background-size: cover;
   background-position: center;
@@ -47,12 +76,11 @@ nav ul :hover {
 
 }
 
-.sld{
-  
+.sld {
+
   width: 100%;
   height: 100%;
-  color: rgb(237, 234, 234);
-  background-color: rgba(240, 248, 238, 0.5);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,55 +90,170 @@ nav ul :hover {
 
 @keyframes slider {
   0% {
-    background-image: url(/img/1.jpg);
+    background-image: url(../img/1.jpg);
   }
 
-  20% {
-    background-image: url(/img/1.jpg);
+  16% {
+    background-image: url(../img/1.jpg);
   }
 
   21% {
-    background-image: url(/img/2.jpg);
+    background-image: url(../img/2.jpg);
   }
 
   40% {
-    background-image: url(/img/2.jpg);
+    background-image: url(../img/2.jpg);
   }
 
   41% {
-    background-image: url(/img/3.jpg);
+    background-image: url(../img/3.jpg);
   }
 
   60% {
-    background-image: url(/img/3.jpg);
+    background-image: url(../img/3.jpg);
   }
 
-  /* 61%{
-		background-image: url("../img/5.jpg");
-	}
-	80%{
-		background-image: url("../img/5.jpg");
-	}
-	
-	81%{
-		background-image: url("../img/6.jpg");
-	}
-	100%{
-		background-image: url("../img/6.jpg");
-	}	  */
+  61% {
+    background-image: url(../img/4.jpg);
+  }
+
+  80% {
+    background-image: url(../img/4.jpg);
+  }
+
+  81% {
+    background-image: url(../img/5.jpg);
+  }
+
+  100% {
+    background-image: url(../img/5.jpg);
+  }
+
+  101% {
+    background-image: url(../img/6.jpg);
+  }
+
+  120% {
+    background-image: url(../img/6.jpg);
+  }
 }
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+
+
+
+/* footer-------------------------------------- */
+.footer {
+  border-top: 2px solid white;
+  background: #000000;
+  color: #eee;
+  font-family: "Poppins", sans-serif;
+  padding: 50px 16px 16px 50px;
+}
+
+.seccion1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 6rem;
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: 19px;
+  margin-bottom: 18px;
+  color: #fff;
+  border-left: 4px solid rgb(17, 215, 156);
+  padding-left: 8px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content ul li {
+  margin-bottom: 9px;
+}
+
+.content ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.content ul li a:hover {
+  color: #0af;
+}
+
+/*formulario-------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input,
+.form textarea {
+  background: #353434;
+  border: none;
+  padding: 6px;
+  color: white;
+  border-radius: 6px;
+}
+
+.form button {
+  background-color: rgb(17, 215, 156);
+  border: none;
+  color: #020202;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
 
 }
 
-footer {
-  background-color: hsl(150, 42%, 35%);
-  padding: 70px;
 
+/* redesociales--------------------- */
+.redesociales {
+  display: flex;
+  gap: 9px;
 
+}
 
+.redesociales img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.redesociales img:hover {
+  transform: scale(1.3);
+}
+
+/* seccion2---------------------- */
+.seccion2 {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.seccion2 ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px;
+
+}
+
+.seccion2 ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.seccion2 ul li a:hover {
+  color: rgb(17, 215, 156);
 }
