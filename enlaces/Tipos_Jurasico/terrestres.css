@@ -1,5 +1,9 @@
 body {
     background-image: url("img/fondoTerrestre.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin:0;
 }
 /*Encabezado*/
@@ -12,22 +16,95 @@ header {
 }
 /*Contenedor de dinosaurios*/
 .contenedor-terrestres {
-    margin: 2%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-}
-.info {
-    width: calc(33.333% - 14px);
-    text-align: center;
-    border-radius: 0.5rem;
-    background-color:rgba(22, 246, 59, 0.6);
-    color: rgba(255, 255, 255, 0.73);
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1.8rem auto;
+    max-width: 75rem;
 }
 
-/* Tamaño de las imagenes */
-img[src] {
-    width: 30%;
+
+/*--------------------Tarjeta de dinosaurios-------------------*/
+.dino-tarjeta {
+    perspective: 62.5rem;
+    width: 18.75rem;
+    height: 23.75rem;
+    border-radius: 0.9375rem;
+    cursor: pointer;
+    position: relative;
 }
+/*----Funcion de giro----*/
+.giro-tarjeta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.frente-tarjeta, .atras-tarjeta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 15px rgba(21, 101, 192, 0.15);
+  background: white;
+  overflow: hidden;
+}
+.giro {
+  display: none;
+}
+.giro:checked +  .giro-tarjeta{
+    transform:rotateY(180deg);
+}
+
+/*----Edicion de tarjeta de frente----*/
+.frente-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.frente-tarjeta h3 {
+  background: #9a5609;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin: 0;
+  font-size: 1.1em;
+}
+.frente-tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*------Edicion de tarjeta de atras------*/
+.atras-tarjeta {
+  background: #f3f7ff;
+  color: #4A90E2;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem;
+  text-align: center;
+}
+.atras-tarjeta h3 {
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+.atras-tarjeta p {
+  margin: 0.3rem 0;
+  font-size: 1em;
+}
+
+
+
+
+/* Tamaño de las imagenes */
+
+
