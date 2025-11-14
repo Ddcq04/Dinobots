@@ -19,17 +19,17 @@ body {
 header {
     margin:0;
     background:rgba(0, 0, 0, 0.6);
-    color:rgb(37, 159, 37);
+    color:white;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     padding: 2.5rem 2%;
     letter-spacing: 0.2rem;
-    border-bottom: 0.2rem solid #ffffff;
+    border-bottom: 0.2rem solid #cecece;
 }
 
 /*Contenedor de dinosaurios*/
-.contenedor-terrestres {
+.contenedor-voladores {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -82,7 +82,7 @@ header {
     align-items: center;
 }
 .frente-tarjeta h3 {
-  background: #549a09;
+  background: #3498DB;
   color: white;
   width: 100%;
   text-align: center;
@@ -117,8 +117,8 @@ header {
 
 /*------Edicion de tarjeta de atras------*/
 .atras-tarjeta {
-  background: #05aa1529;
-  color: #ffffff;
+  background: #ecf0f155;
+  color: #0057b3;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -128,17 +128,10 @@ header {
   text-align: center;
 }
 .atras-tarjeta h3 {
-  color: #ffffff;
+  color:#0057b3;
   margin-bottom: 10px;
 }
 .atras-tarjeta p {
   margin: 0.3rem 0;
   font-size: 1em;
 }
-
-
-
-
-
-
-
