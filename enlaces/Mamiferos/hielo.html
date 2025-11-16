@@ -4,186 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animales de la Edad del Hielo</title>
-  <link rel="stylesheet" href="hielo.css">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
   <header>
     <h1>Animales de la Edad del Hielo</h1>
     <p>Descubre las especies voladoras, terrestres y acuáticas del Pleistoceno</p>
   </header>
 
+  <video autoplay muted loop id="video-fondo">
+    <source src="imagenes/video.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+      <section class="menu">
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Inicio principal</a></li>
+                <li><a href="../Etapas_Jurasica/era.html">Era Antigua</a></li>
+                <li><a href="../Dinosaurios/dinosaurios.html">Dinosaurios</a></li>
+                <li><a href="../Mamiferos/hielo.html">Mamiferos</a></li>
+            </ul>
+        </nav>
+    </section>
+
   <main>
-    <!-- 🦅 Voladores -->
+
     <section>
       <h2>Animales Voladores</h2>
-      <div class="animal-container">
+      <div class="contenedor-animales">
 
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Ave del Terror</h3>
-              <img src="img/ave.jpg" alt="Ave del Terror">
-            </div>
-            <div class="card-back">
-              <h3>Ave del Terror</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Tierras frías del norte</p>
-            </div>
-          </div>
-        </label>
+        <div class="tarjeta-animal">
+          <img src="imagenes/ave1.jpg" alt="Teratornis merriami">
+          <h3>Teratornis merriami</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Teratornithidae</p>
+          <p><strong>Hábitat:</strong> Lagos y llanuras templadas</p>
+          <p><strong>Alimentación:</strong> Carroñero</p>
+          <p><strong>Tiempo de vida:</strong> 1 millón – 10,000 años atrás</p>
+          <p><strong>Especie:</strong> Teratornis merriami</p>
+        </div>
 
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Búho Gigante</h3>
-              <img src="img/buho.jpg" alt="Búho Gigante">
-            </div>
-            <div class="card-back">
-              <h3>Búho Gigante</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Bosques templados</p>
-            </div>
-          </div>
-        </label>
+        <div class="tarjeta-animal">
+          <img src="imagenes/buho.jpg" alt="Búho Gigante">
+          <h3>Búho Gigante</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Strigidae</p>
+          <p><strong>Hábitat:</strong> Bosques templados</p>
+          <p><strong>Alimentación:</strong> Carnívoro</p>
+          <p><strong>Tiempo de vida:</strong> 1 millón – 10,000 años atrás</p>
+          <p><strong>Especie:</strong> Ornimegalonyx oteroi</p>
+        </div>
 
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Águila de Haast</h3>
-              <img src="img/aguila.jpg" alt="Águila de Haast">
-            </div>
-            <div class="card-back">
-              <h3>Águila de Haast</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Llanuras abiertas</p>
-            </div>
-          </div>
-        </label>
+        <div class="tarjeta-animal">
+          <img src="imagenes/aguila.jpg" alt="Águila de Haast">
+          <h3>Águila de Haast</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Accipitridae</p>
+          <p><strong>Hábitat:</strong> Llanuras abiertas</p>
+          <p><strong>Alimentación:</strong> Carnívoro</p>
+          <p><strong>Tiempo de vida:</strong> 700,000 – 600 años atrás</p>
+          <p><strong>Especie:</strong> Harpagornis moorei</p>
+        </div>
 
-      </div>
-    </section><br><br>
-
-    <!-- 🐘 Terrestres -->
-    <section>
-      <h2>Animales Terrestres</h2>
-      <div class="animal-container">
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Mamut</h3>
-              <img src="img/mamut.jpg" alt="Mamut">
-            </div>
-            <div class="card-back">
-              <h3>Mamut</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Estepas heladas</p>
-            </div>
-          </div>
-        </label>
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Tigre de Dientes de Sable</h3>
-              <img src="img/sable.jpg" alt="Tigre de Dientes de Sable">
-            </div>
-            <div class="card-back">
-              <h3>Tigre de Dientes de Sable</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Sabana templada</p>
-            </div>
-          </div>
-        </label>
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Perezoso Gigante</h3>
-              <img src="img/sid.jpg" alt="Perezoso Gigante">
-            </div>
-            <div class="card-back">
-              <h3>Perezoso Gigante</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Bosques tropicales</p>
-            </div>
-          </div>
-        </label>
-
-      </div>
-    </section><br><br>
-
-    <!-- 🐋 Acuáticos -->
-    <section>
-      <h2>Animales Acuáticos</h2>
-      <div class="animal-container">
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Morsa Gigante</h3>
-              <img src="img/morsa.jpg" alt="Morsa Gigante">
-            </div>
-            <div class="card-back">
-              <h3>Morsa Gigante</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Océanos árticos</p>
-            </div>
-          </div>
-        </label>
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>Foca Monje Antigua</h3>
-              <img src="foca.jpg" alt="Foca Monje Antigua">
-            </div>
-            <div class="card-back">
-              <h3>Foca Monje Antigua</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Costas frías</p>
-            </div>
-          </div>
-        </label>
-
-        <label class="animal-card">
-          <input type="checkbox" class="toggle">
-          <div class="card-inner">
-            <div class="card-front">
-              <h3>León Marino Antiguo</h3>
-              <img src="leonmarino.jpg" alt="León Marino Antiguo">
-            </div>
-            <div class="card-back">
-              <h3>León Marino Antiguo</h3>
-              <p><strong>Periodo:</strong> Pleistoceno</p>
-              <p><strong>Era:</strong> Cenozoico</p>
-              <p><strong>Hábitat:</strong> Aguas templadas</p>
-            </div>
-          </div>
-        </label>
+        <div class="tarjeta-animal">
+          <img src="imagenes/aiolornis.jpg" alt="Aiolornis incredibilis">
+          <h3>Aiolornis incredibilis</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Teratornithidae</p>
+          <p><strong>Hábitat:</strong> Zonas abiertas y desérticas</p>
+          <p><strong>Alimentación:</strong> Carnívoro / Carroñero</p>
+          <p><strong>Tiempo de vida:</strong> 2.5 millones – 13,000 años atrás</p>
+          <p><strong>Especie:</strong> Aiolornis incredibilis</p>
+        </div>
 
       </div>
     </section>
+
+    
+    <section>
+      <h2>Animales Terrestres</h2>
+      <div class="contenedor-animales">
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/mamut.jpg" alt="Mamut">
+          <h3>Mamut</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Elephantidae</p>
+          <p><strong>Hábitat:</strong> Estepas heladas</p>
+          <p><strong>Alimentación:</strong> Herbívoro</p>
+          <p><strong>Tiempo de vida:</strong> 400,000 – 4,000 años atrás</p>
+          <p><strong>Especie:</strong> Mammuthus primigenius</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/tigre.jpg" alt="Tigre de Dientes de Sable">
+          <h3>Tigre de Dientes de Sable</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Felidae</p>
+          <p><strong>Hábitat:</strong> Sabana templada</p>
+          <p><strong>Alimentación:</strong> Carnívoro</p>
+          <p><strong>Tiempo de vida:</strong> 2.5 millones – 10,000 años atrás</p>
+          <p><strong>Especie:</strong> Smilodon fatalis</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/perezoso.jpg" alt="Perezoso Gigante">
+          <h3>Perezoso Gigante</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Megatheriidae</p>
+          <p><strong>Hábitat:</strong> Bosques tropicales</p>
+          <p><strong>Alimentación:</strong> Herbívoro</p>
+          <p><strong>Tiempo de vida:</strong> 1.8 millones – 8,000 años atrás</p>
+          <p><strong>Especie:</strong> Megatherium americanum</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/Smilodon.jpg" alt="Smilodon fatalis">
+          <h3>Smilodon</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Felidae</p>
+          <p><strong>Hábitat:</strong> Praderas y bosques abiertos</p>
+          <p><strong>Alimentación:</strong> Carnívoro</p>
+          <p><strong>Tiempo de vida:</strong> 2.5 millones – 10,000 años atrás</p>
+          <p><strong>Especie:</strong> Smilodon fatalis</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACUÁTICOS -->
+    <section>
+      <h2>Animales Acuáticos</h2>
+      <div class="contenedor-animales">
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/morsa.jpg" alt="Morsa Gigante">
+          <h3>Morsa Gigante</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Odobenidae</p>
+          <p><strong>Hábitat:</strong> Océanos árticos</p>
+          <p><strong>Alimentación:</strong> Carnívoro (molusívoro)</p>
+          <p><strong>Tiempo de vida:</strong> 1 millón de años – hoy</p>
+          <p><strong>Especie:</strong> Odobenus rosmarus</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/foca.jpg" alt="Foca Monje Antigua">
+          <h3>Foca Monje Antigua</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Phocidae</p>
+          <p><strong>Hábitat:</strong> Costas frías</p>
+          <p><strong>Alimentación:</strong> Carnívoro (piscívoro)</p>
+          <p><strong>Tiempo de vida:</strong> 500,000 años – siglo XX</p>
+          <p><strong>Especie:</strong> Monachus tropicalis</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/leonmarino.jpg" alt="León Marino Antiguo">
+          <h3>León Marino Antiguo</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Otariidae</p>
+          <p><strong>Hábitat:</strong> Aguas templadas</p>
+          <p><strong>Alimentación:</strong> Carnívoro (piscívoro)</p>
+          <p><strong>Tiempo de vida:</strong> 2.5 – 0.3 millones de años atrás</p>
+          <p><strong>Especie:</strong> Thalassoleon macnallyae</p>
+        </div>
+
+        <div class="tarjeta-animal">
+          <img src="imagenes/vacamarina.jpg" alt="Hydrodamalis gigas">
+          <h3>Vaca Marina de Steller</h3>
+          <p><strong>Periodo:</strong> Pleistoceno</p>
+          <p><strong>Era:</strong> Cenozoico</p>
+          <p><strong>Familia:</strong> Dugongidae</p>
+          <p><strong>Hábitat:</strong> Aguas frías del Pacífico Norte</p>
+          <p><strong>Alimentación:</strong> Herbívoro (algas marinas)</p>
+          <p><strong>Tiempo de vida:</strong> 2 millones – 1768 d.C.</p>
+          <p><strong>Especie:</strong> Hydrodamalis gigas</p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <p>© 2025 Animales de la Edad del Hielo</p>
   </footer>
+
 </body>
 </html>
