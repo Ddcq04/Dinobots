@@ -40,6 +40,7 @@ nav {
   margin: 0;
   padding: 1rem 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+<<<<<<< HEAD
   background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.6) 0%,
       /* apenas oscuro arriba */
@@ -47,6 +48,8 @@ nav {
       /* transparente abajo */
     );
 
+=======
+>>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
 }
 
 
@@ -56,11 +59,15 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   gap: 2rem;
   flex-wrap: wrap;
   padding: 0 1rem;
   margin: 0;
 
+=======
+  gap: 70px;
+>>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
 }
 
 nav ul li {
@@ -95,6 +102,7 @@ nav ul li:active {
 
 }
 
+<<<<<<< HEAD
 /* La lista de slides (las 5 <li>) */
 .slidbox ul {
   display: flex;
@@ -164,6 +172,15 @@ nav ul li:active {
   padding: 0.2rem 0.6rem;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 
+=======
+.sld {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+>>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
 }
 
 .t2 {
@@ -218,6 +235,7 @@ nav ul li:active {
 
 @keyframes slide {
   0% {
+<<<<<<< HEAD
     transform: translateX(0);
   }
 
@@ -246,10 +264,34 @@ nav ul li:active {
 
   48% {
     transform: translateX(-300vw);
+=======
+    background-image: url(img/1.jpg);
+  }
+
+  16% {
+    background-image: url(img/1.jpg);
+  }
+
+  21% {
+    background-image: url(img/2.jpg);
+  }
+
+  40% {
+    background-image: url(img/2.jpg);
+  }
+
+  41% {
+    background-image: url(img/3.jpg);
+  }
+
+  60% {
+    background-image: url(img/3.jpg);
+>>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
   }
 
   /* slide 4 */
   61% {
+<<<<<<< HEAD
     transform: translateX(-300vw);
   }
 
@@ -267,6 +309,29 @@ nav ul li:active {
 
   100% {
     transform: translateX(-500vw);
+=======
+    background-image: url(img/4.jpg);
+  }
+
+  80% {
+    background-image: url(img/4.jpg);
+  }
+
+  81% {
+    background-image: url(img/5.jpg);
+  }
+
+  100% {
+    background-image: url(img/5.jpg);
+  }
+
+  101% {
+    background-image: url(img/6.jpg);
+  }
+
+  120% {
+    background-image: url(img/6.jpg);
+>>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
   }
 }
 
