@@ -36,20 +36,16 @@ nav {
   margin-top: 7rem;
   max-width: 100%;
   z-index: 10;
-  /* por encima del slider */
   margin: 0;
   padding: 1rem 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-<<<<<<< HEAD
+
   background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.6) 0%,
       /* apenas oscuro arriba */
       rgba(0, 0, 0, 0) 100%
       /* transparente abajo */
     );
-
-=======
->>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
 }
 
 
@@ -59,15 +55,12 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   gap: 2rem;
   flex-wrap: wrap;
   padding: 0 1rem;
   margin: 0;
-
-=======
   gap: 70px;
->>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
+
 }
 
 nav ul li {
@@ -94,6 +87,11 @@ nav ul li:active {
   transform: scale(1.05);
 }
 
+nav ul li a {
+  text-decoration: none;          /* ❌ quita el subrayado */
+  color: inherit;                 /* ✅ usa el mismo color del <li> */
+  display: inline-block;          /* para que el padding del li/a funcione bien */
+}
 /* slider------------------------------------------------------------ */
 
 .slidbox {
@@ -102,7 +100,7 @@ nav ul li:active {
 
 }
 
-<<<<<<< HEAD
+
 /* La lista de slides (las 5 <li>) */
 .slidbox ul {
   display: flex;
@@ -171,8 +169,8 @@ nav ul li:active {
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
 
-=======
 .sld {
   width: 100%;
   height: 100%;
@@ -180,7 +178,7 @@ nav ul li:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
->>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
+
 }
 
 .t2 {
@@ -235,7 +233,7 @@ nav ul li:active {
 
 @keyframes slide {
   0% {
-<<<<<<< HEAD
+
     transform: translateX(0);
   }
 
@@ -264,7 +262,7 @@ nav ul li:active {
 
   48% {
     transform: translateX(-300vw);
-=======
+
     background-image: url(img/1.jpg);
   }
 
@@ -286,12 +284,12 @@ nav ul li:active {
 
   60% {
     background-image: url(img/3.jpg);
->>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
+
   }
 
   /* slide 4 */
   61% {
-<<<<<<< HEAD
+
     transform: translateX(-300vw);
   }
 
@@ -309,7 +307,7 @@ nav ul li:active {
 
   100% {
     transform: translateX(-500vw);
-=======
+
     background-image: url(img/4.jpg);
   }
 
@@ -331,7 +329,7 @@ nav ul li:active {
 
   120% {
     background-image: url(img/6.jpg);
->>>>>>> 836d83248375b89084dbef78d3b29d55ed0e6010
+
   }
 }
 
@@ -348,7 +346,6 @@ nav ul li:active {
 }
 
 .seccion1 {
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 3rem;
@@ -358,7 +355,6 @@ nav ul li:active {
 }
 
 .content h2 {
-
   margin-bottom: 18px;
   color: #fff;
   border-left: 4px solid rgb(17, 215, 156);
@@ -374,6 +370,10 @@ nav ul li:active {
   margin-bottom: 9px;
 
 }
+.content ul li:hover {
+ color: rgb(17, 215, 156);
+ cursor: pointer;
+}
 
 .content ul li a {
   color: #aaa;
@@ -383,7 +383,10 @@ nav ul li:active {
 
 .content ul li a:hover {
   color: rgb(17, 215, 156);
+
 }
+
+
 
 /*formulario-------------------------- */
 .form {
