@@ -1,0 +1,297 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+ 
+  color: #4800d8b2;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgb(255, 255, 255);
+  padding: 2rem 1rem;
+}
+
+body#era {
+    background-image: url("../imagenes/world.gif");
+  background-repeat: no-repeat;
+  /* evita el mosaico */
+  background-size: cover;
+  /* hace que cubra toda la pantalla */
+  background-position: center;
+  /* centra la imagen */
+  background-attachment: fixed;
+
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+
+/* ITEMS */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: end;
+
+}
+
+
+.timeline-content {
+/*  background:#900702 ;*/
+  border: 2px solid #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  
+}
+
+.etapas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.etapas a {
+  background: #1391c7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.etapas a:hover {
+  background: #0e4d64;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4ab4da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #267871;
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/*CARTA*/
+
+.carta {
+  position: relative;
+    width: 200px;
+    height: 350px; /* ALTURA UNIFORME PARA TODAS */
+    margin: 10px;
+    perspective: 1000px;
+    flex: 0 0 auto;
+
+
+}
+
+
+body#jurasico,body#triasico,body#cretacico  {
+  background-image: url("../imagenes/paisa.jpg");
+
+  background-repeat: no-repeat;
+  /* evita el mosaico */
+  background-size: cover;
+  /* hace que cubra toda la pantalla */
+  background-position: center;
+  
+  /* centra la imagen */
+
+
+}
+
+
+
+.carta div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.6s ease;
+  /* Solo transición en transform */
+  flex-direction: column;
+  /* Organiza el contenido en columna */
+  justify-content: flex-start;
+  /* Alinea contenido al inicio */
+
+  border: 2px solid #333;
+  border-radius: 5%;
+}
+
+/*INFO RESUMIDA*/
+
+.carta .detras h1 {
+    margin: 0;
+    padding: 15px 10px;
+    font-size: 1.4rem;
+    background-color: #014a5e;
+    width: 100%;
+    text-align: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.carta .detras .info-resumida {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido */
+}
+.carta .detras ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carta .detras li {
+    margin: 8px 0;
+    padding: 4px 0;
+    line-height: 1.2;
+    font-size: 1.2rem;
+}
+/*RESUMIDA*/
+.carta .frente {
+  transform: rotateY(0deg);
+  display: flex;
+  justify-content: end;
+  backface-visibility: hidden;
+
+
+  /*muestra solo la parte delantera de la imagen*/
+
+}
+
+.carta .frente img {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+  /*  border: 4px solid #b4b7b4;*/
+   /* box-shadow: 0 5px 15px rgba(0,0,0,0.3);*/
+    display: flex;
+
+    transform: scale(1.2) translateY(-10px); /* Súbela un poco */
+    margin: 0; /* Evita que el margin afecte posiciones inesperadas */
+    position: relative;
+    top: -5px; /* Ajuste fino */
+}
+
+
+.carta .detras {
+  background-color: #012734;
+  transform: rotateY(180deg);
+  text-align: center;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #ddd;
+  /* Evita desbordamiento */
+
+}
+
+
+
+.carta:hover .frente {
+
+  transform: rotateY(-180deg);
+
+}
+
+.carta:hover .detras {
+
+  transform: rotateY(0deg);
+
+}
+
+
+
+
+/*FLEXBOX CARTAS CONTENEDOR*/
+
+.contenedor-cartas {
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centra las cartas */
+  gap: 20px;
+  /* Espacio uniforme entre cartas */
+
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1920px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+
+  .timeline-item::after {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+
+  .timeline-item::after {
+    left: 0;
+  }
+}
