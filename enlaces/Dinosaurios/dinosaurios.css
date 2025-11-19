@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.5);
+}
+/*--------Contenedor tipos------*/
+.contenedor-tipos {
+    display: flex;
+    flex-direction: column;
+}
+.terrestres, .acuaticos, .voladores {
+    position: relative;
+    height: 33.33vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.terrestres a, .acuaticos a, .voladores a {
+    position: absolute;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+}
+
+.terrestres:hover video, .acuaticos:hover video, .voladores:hover video{
+    filter: brightness(1);
+}
+
+a:hover {
+    transform:scale(1.1);
+}
