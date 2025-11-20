@@ -1,0 +1,278 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: hsl(131, 44%, 27%);
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+header h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+nav {
+  position: center;
+  top: 7rem;
+  width: 100%;
+  margin-top: 7rem;
+  max-width: 100%;
+  z-index: 10;
+  margin: 0;
+  padding: 1rem 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      /* apenas oscuro arriba */
+     /* rgba(0, 0, 0, 0) 100%
+      /* transparente abajo 
+    );
+    */
+    }
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  margin: 0;
+  gap: 70px;
+
+}
+
+nav ul li {
+  font-size: 1.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+
+ /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);/* sombra legible */
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+}
+
+nav ul li:hover {
+  background-color: hsla(246, 88%, 46%, 0.8);
+  transform: scale(1.10);
+}
+
+nav ul li:active {
+  transform: scale(1.05);
+}
+
+nav ul li a {
+  text-decoration: none;          
+  color: inherit;                 
+  display: inline-block;          
+}
+nav ul li a:hover {
+  text-decoration: none;
+}
+/*FIN NAVEGACION*/
+
+body#eraMesozoico,body#eraHielo{
+    background-image: url("World.gif");
+  background-repeat: no-repeat;
+  /* evita el mosaico */
+  background-size: cover;
+  /* hace que cubra toda la pantalla */
+  background-position: center;
+  /* centra la imagen */
+  background-attachment: fixed;
+
+}
+
+
+header {
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #0078d4;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  width: 15px;
+  height: 15px;
+  background: #0078d4;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #0078d4;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -9px;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -9px;
+}
+
+
+/* Añade esto a tu etilos.css */
+
+.timeline-item.center-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    left: 0 !important; /* Fuerza centrado */
+}
+
+.timeline-item.center-item .timeline-content {
+    width: 50%;
+    text-align: center;
+}
+
+.timeline-item.center-item::after {
+    display: none; /* Elimina el círculo azul del elemento centrado */
+}
+
+/* Asegurar que los otros elementos mantengan su posición */
+.timeline-item:nth-child(odd):not(.center-item) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even):not(.center-item) {
+    left: 50%;
+}
+.timeline-item.center-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.timeline-item.center-item .timeline-content {
+  width: 50%;        /* Puedes ajustar */
+  text-align: center;
+}
+
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+ul li a {
+  color: #dc1616;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #0078d4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #010d3e;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
