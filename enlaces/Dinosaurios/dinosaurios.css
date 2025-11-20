@@ -42,4 +42,5 @@ video {
 
 a:hover {
     transform:scale(1.1);
+    text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.8);
 }
