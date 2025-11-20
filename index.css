@@ -6,6 +6,7 @@
 
 }
 
+/* headerrr----------------------------------------------------- */
 
 header {
   background-color: hsl(131, 44%, 27%);
@@ -73,7 +74,7 @@ nav ul li {
   color: rgba(255, 255, 255, 0.8);
   color: #fff;
 
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);/* sombra legible */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);/* sombrita */
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
@@ -88,9 +89,9 @@ nav ul li:active {
 }
 
 nav ul li a {
-  text-decoration: none;          /* ❌ quita el subrayado */
-  color: inherit;                 /* ✅ usa el mismo color del <li> */
-  display: inline-block;          /* para que el padding del li/a funcione bien */
+  text-decoration: none;         
+  color: inherit;                
+  display: inline-block;         
 }
 /* slider------------------------------------------------------------ */
 
@@ -101,17 +102,16 @@ nav ul li a {
 }
 
 
-/* La lista de slides (las 5 <li>) */
+/* la lista de cada foto */
 .slidbox ul {
   display: flex;
   padding: 0;
   margin: 0;
   width: 600%;
-  /* 5 imágenes → 5 * 100% */
-  animation: slide 23s infinite;
+  animation: slide 40s infinite;
 }
 
-/* Cada slide */
+/* Cada slider */
 .slidbox li {
   width: 100vw;
   height: calc(100vh - 95px);
@@ -120,23 +120,19 @@ nav ul li a {
   flex-shrink: 0;
 }
 
-/* Imagen de cada slide */
+/*imagen individual */
 .slidbox img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  /* que rellene sin deformarse mucho */
+  object-fit: cover;/*relleno sin deformarcion*/
 }
 
-/* TEXTO SOBRE CADA IMAGEN */
+/* texto de slider */
 .txt {
   position: absolute;
-  top: 50%;
-  /* centrado vertical */
-  left: 50%;
-  /* centrado horizontal */
-  transform: translate(-50%, -50%);
-  /* ajustar para centrar de verdad */
+  top: 50%; /* centrado vertical */
+  left: 50%;/* centrado horizontal */
+  transform: translate(-50%, -50%);/* centrado */
   text-align: center;
   color: white;
   padding: 0 50px;
@@ -149,21 +145,15 @@ nav ul li a {
 
 .txt h3 {
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
-.txt p {
-  font-size: 18px;
-}
 
 .t1 {
-  position: absolute;
-  /* necesario para poder mover el texto */
-  top: 50%;
-  /* distancia desde arriba del slide */
-  left: 30%;
-  /* distancia desde la izquierda */
+   position: absolute;
+  top: 45%;
+  left: 35%;
   text-align: left;
-  color: #ffffff;
 
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -204,6 +194,7 @@ nav ul li a {
   top: 45%;
   left: 35%;
   text-align: left;
+  
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
@@ -237,7 +228,7 @@ nav ul li a {
     transform: translateX(0);
   }
 
-  /* slide 1 */
+  /* slider 1 */
   13% {
     transform: translateX(0);
   }
@@ -246,7 +237,7 @@ nav ul li a {
     transform: translateX(-100vw);
   }
 
-  /* slide 2 */
+  /* slider 2 */
   29% {
     transform: translateX(-100vw);
   }
@@ -255,7 +246,7 @@ nav ul li a {
     transform: translateX(-200vw);
   }
 
-  /* slide 3 */
+  /* slider 3 */
   45% {
     transform: translateX(-200vw);
   }
@@ -287,7 +278,7 @@ nav ul li a {
 
   }
 
-  /* slide 4 */
+  /* slider 4 */
   61% {
 
     transform: translateX(-300vw);
