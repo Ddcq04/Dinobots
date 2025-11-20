@@ -5,9 +5,7 @@ body {
   padding: 0;
 }
 
-a {
-  font-size: 40px;
-}
+
 header {
   background-color: hsl(131, 44%, 27%);
   width: 100%;
@@ -87,7 +85,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: hsla(246, 88%, 46%, 0.8);
+  background-color: hsla(231, 68%, 63%, 0.8);
   transform: scale(1.10);
 }
 
@@ -120,8 +118,7 @@ body#eraMesozoico,body#eraHielo{
 
 header {
   text-align: center;
-  background: #003366;
-  color: white;
+  background: rgba(0, 137, 191, 0.829);   color: white;
   padding: 2rem 1rem;
 }
 
@@ -247,7 +244,7 @@ ul li {
 }
 
 ul li a {
-  color: #dc1616;
+  color: #0853e8;
   text-decoration: none;
 }
 
