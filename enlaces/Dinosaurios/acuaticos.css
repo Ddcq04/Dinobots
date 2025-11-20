@@ -43,16 +43,18 @@ nav ul {
 }
 
 nav ul li {
-    font-size: 29px;
     padding: 0.5rem 1rem;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+a {
+    font-size: 29px;
+    text-decoration: none;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.8)
 }
-
 nav ul li:hover {
     background-color: #0e287e;
     transform: scale(1.10);

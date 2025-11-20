@@ -5,7 +5,9 @@ body {
   padding: 0;
 }
 
-
+a {
+  font-size: 40px;
+}
 header {
   background-color: hsl(131, 44%, 27%);
   width: 100%;
