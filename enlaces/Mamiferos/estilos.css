@@ -85,7 +85,7 @@ h2 {
   filter: brightness(80%);
 }
 
-/* NUEVO: contenedor-animales */
+
 .contenedor-animales {
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +95,6 @@ h2 {
   max-width: 1800px;
 }
 
-/* NUEVO: tarjeta-animal */
 .tarjeta-animal {
   width: 300px;
   background: rgba(255, 255, 255, 0.542);
