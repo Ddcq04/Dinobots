@@ -44,17 +44,7 @@ nav {
   margin: 0;
   padding: 1rem 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-/*
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.6) 0%,
-      /* apenas oscuro arriba */
-     /* rgba(0, 0, 0, 0) 100%
-      /* transparente abajo 
-    );
-    */
     }
-
-
 
 nav ul {
   list-style: none;
@@ -78,14 +68,12 @@ nav ul li {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   color: #fff;
-
- /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);/* sombra legible */
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
 
 nav ul li:hover {
-  background-color: hsla(231, 68%, 63%, 0.8);
+  background-color: hsla(231, 68%, 37%, 0.8);
   transform: scale(1.10);
 }
 
