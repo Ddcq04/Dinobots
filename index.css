@@ -1,3 +1,51 @@
+/* ================================================= */
+/* === MEDIA QUERIES PARA ANCHO DE PANTALLA <= 903px === */
+/* ================================================= */
+
+@media (max-width: 903px) {
+
+
+  .slidbox ul li .boton {
+    /* Hacemos que la posición sea un poco menos extrema para que se vean */
+    top: 70%;
+    /* Mover el botón más abajo para que no choque con los títulos */
+    left: 5%;
+    /* Moverlo a la izquierda para dejar más margen */
+    font-size: 1.1rem;
+    /* Reducir el tamaño de la fuente */
+    max-width: 150px;
+    /* Asegurar que no se estiren demasiado si usamos VW */
+  }
+
+  /* Regla para los botones centrados (.boton.b1) */
+  .slidbox ul li .boton.b1 {
+    /* Si usaste translate para centrarlo, puede que solo necesites ajustar el top */
+    top: 75%;
+    /* Más abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Mantener el centrado horizontal */
+  }
+
+  /* --- 3. AJUSTE DEL TEXTO PRINCIPAL (TXT) --- */
+  /* Aseguramos que el texto no desborde el contenedor */
+  .slidbox ul li .txt h2 {
+    font-size: 2.5rem;
+    /* Reducir el título principal */
+  }
+
+  .slidbox ul li .txt h3 {
+    font-size: 1.2rem;
+    /* Reducir el subtítulo */
+  }
+
+
+
+}
+
+
+
+/* ---------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +59,7 @@
 header {
   background-color: hsl(131, 44%, 27%);
   width: 100%;
-  padding: 34px 0 34px 0;
+  padding: 16px 0 0 0;
   border-bottom: 3px solid rgb(255, 255, 255);
   box-shadow: 34 56px 18px rgba(0, 0, 0, 0.3);
 
@@ -32,8 +80,6 @@ header h1 {
 
 /*barra de navegacion--------------------------------------------------*/
 nav {
-  position: absolute;
-  top: 7.4rem;
   width: 100%;
   margin-top: 7rem;
   max-width: 100%;
@@ -42,18 +88,19 @@ nav {
   padding: 1rem 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.6) 0%,
-      /* apenas oscuro arriba */
-      rgba(0, 0, 0, 0) 100%
-      /* transparente abajo */
-    );
+  /* SOMBRA CON DEGRADADO */
+  /* background: linear-gradient(to bottom,
+      /* rgba(0, 0, 0, 0.6) 0%, */
+  /* apenas oscuro arriba */
+  /* rgba(0, 0, 0, 0) 100% 
+      transparente abajo 
+    ); */
 }
 
 
 
 nav ul {
-  font-family:"Roboto";
+  font-family: "Roboto";
   list-style: none;
   display: flex;
   justify-content: center;
@@ -76,7 +123,8 @@ nav ul li {
   color: rgba(255, 255, 255, 0.8);
   color: #fff;
 
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);/* sombrita */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  /* sombrita */
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
@@ -91,10 +139,74 @@ nav ul li:active {
 }
 
 nav ul li a {
-  text-decoration: none;         
-  color: inherit;                
-  display: inline-block;         
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
+
+/* MEDIAQUERIES NAVEGADOR HEADER */
+@media (max-width: 903px) {
+
+  header {
+    background-color: hsl(131, 44%, 27%);
+    width: 100%;
+
+    /* POSICION */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* ALINEACIÓN (H1 IZQUIERDA, NAV DERECHA) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    border-bottom: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  /* --- 2. ACTIVACIÓN DEL MENÚ HAMBURGUESA --- */
+
+  .menu-icon {
+    display: flex;
+    /* Mostrar el icono */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    order: 2;
+    /* El icono a la derecha */
+  }
+
+  .nav-line {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  /* Ocultar la lista de navegación por defecto */
+  nav {
+    order: 3;
+    /* El menú aparece debajo de h1 y del icono */
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+  }
+
+
+
+  /* Menú vertical en móvil */
+
+
+
+
+}
+
 /* slider------------------------------------------------------------ */
 
 .slidbox {
@@ -126,15 +238,19 @@ nav ul li a {
 .slidbox img {
   width: 100%;
   height: 100%;
-  object-fit: cover;/*relleno sin deformarcion*/
+  object-fit: cover;
+  /*relleno sin deformarcion*/
 }
 
 /* texto de slider */
 .txt {
   position: absolute;
-  top: 50%; /* centrado vertical */
-  left: 50%;/* centrado horizontal */
-  transform: translate(-50%, -50%);/* centrado */
+  top: 50%;
+  /* centrado vertical */
+  left: 50%;
+  /* centrado horizontal */
+  transform: translate(-50%, -50%);
+  /* centrado */
   text-align: center;
   color: white;
   padding: 0 50px;
@@ -152,7 +268,7 @@ nav ul li a {
 
 
 .t1 {
-   position: absolute;
+  position: absolute;
   top: 45%;
   left: 35%;
   text-align: left;
@@ -182,6 +298,12 @@ nav ul li a {
 
 }
 
+.b1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 .t3 {
 
   background-color: rgba(0, 0, 0, 0.2);
@@ -196,7 +318,7 @@ nav ul li a {
   top: 45%;
   left: 35%;
   text-align: left;
-  
+
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
@@ -223,6 +345,41 @@ nav ul li a {
 
 }
 
+
+
+.boton {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+  border: 1.5px solid;
+  border-radius: 6px;
+  background-color: lab(25.94% -20.65 14.23 / 0.8);
+  padding: 8px;
+  transition: transform 0.2s ease;
+  max-width: 10rem;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+.boton a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  white-space: normal;
+
+}
+
+.boton:hover {
+  background-color: hsl(130, 35%, 20%);
+  transform: scale(1.10);
+}
+
+.boton:active {
+  transform: scale(1.05);
+}
 
 @keyframes slide {
   0% {
@@ -330,7 +487,7 @@ nav ul li a {
 /* footer--------------------------------------------------------- */
 .footer {
   border-top: 3px solid white;
-  background-color: #1f1f1f;
+  background-color: HSL(0, 0%, 9%);
   color: #eee;
   font-family: "Poppins", sans-serif;
   padding: 50px 16px 16px 50px;
@@ -350,7 +507,7 @@ nav ul li a {
 .content h2 {
   margin-bottom: 18px;
   color: #fff;
-  border-left: 4px solid rgb(17, 215, 156);
+  border-left: 4px solid hsl(131, 44%, 43%);
   padding-left: 8px;
 }
 
@@ -363,13 +520,14 @@ nav ul li a {
   margin-bottom: 9px;
 
 }
+
 .content ul li:hover {
- color: rgb(17, 215, 156);
- cursor: pointer;
+  color: rgb(17, 215, 156);
+  cursor: pointer;
 }
 
 .content ul li a {
-  color: #aaa;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -382,7 +540,7 @@ nav ul li a {
 
 
 /*formulario-------------------------- */
-.form {
+/* .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -405,7 +563,7 @@ nav ul li a {
   border-radius: 6px;
   cursor: pointer;
 
-}
+} */
 
 
 /* redesociales--------------------- */
@@ -452,4 +610,53 @@ nav ul li a {
 
 .seccion2 ul li a:hover {
   color: rgb(17, 215, 156);
+}
+
+
+/* MEDIA QUERIES FOOTER */
+@media (max-width: 903px) {
+
+  /* 5 FILAS */
+  .footer .seccion1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Una columna */
+    gap: 20px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .content h2 {
+    margin-bottom: 18px;
+    border-bottom: 4px solid hsl(131, 44%, 43%);
+    padding-left: 0;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-left: none;
+  }
+
+  /* AVISO LEGAL */
+  .footer .seccion2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .seccion2 ul {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  /* IMAGENES DE ICONOS */
+  .footer .seccion1 .content .redesociales {
+    display: flex;
+    /* FLEXIBLE*/
+    justify-content: center;
+    /* ICONOS*/
+
+  }
+
+
+
+
+
 }
