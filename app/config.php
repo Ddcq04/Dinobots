@@ -16,6 +16,7 @@ class AccesoDatos {
     private $stmt_creauser = null;
     private $stmt_usuario  = null;
     private $stmt_añadirvoto  = null;
+    private $stmt_votodinosaurio = null;
     
     public static function getModelo(){
         if (self::$modelo == null){
@@ -39,11 +40,12 @@ class AccesoDatos {
         //Creacion y preparacion de las consultas
         $this->dbh->setAttribute( PDO::ATTR_EMULATE_PREPARES, FALSE );
         try {
-            //FALTA-----
-        $this->stmt_dinosaurios  = $this->dbh->prepare("select * from Usuarios");
-        $this->stmt_creauser  = $this->dbh->prepare("insert into Usuarios (login,nombre,password,comentario) Values(?,?,?,?)");
-        $this->stmt_usuario   = $this->dbh->prepare("select * from Usuarios where id=:id");
-        $this->stmt_añadirvoto   = $this->dbh->prepare("update Usuarios set nombre=:nombre, password=:password, comentario=:comentario where login=:login");
+        $this->stmt_dinosaurios  = $this->dbh->prepare("select e.nombre, d.*, count(v.id_dinosaurio) from Dinosaurio d join Periodo p on d.id_periodo = p.id
+                                                                                     join Era e on e.id = p.id_era
+                                                                                     join Voto v on d.id = v.id_dinosaurio order by d.id where d.tipo =:tipo_dinosaurio and e.nombre :=nombre_era");
+        $this->stmt_creauser  = $this->dbh->prepare("insert into Usuario (nombre,hash_contrasena,correo) values(?,?,?,?)");
+        $this->stmt_usuario   = $this->dbh->prepare("select * from Usuario where nombre=:nombre_usuario");
+        $this->stmt_añadirvoto   = $this->dbh->prepare("insert into Voto (id_usuario, id_dinosaurio values(:=id_usuario, :=id_dinosaurio)");
         } catch ( PDOException $e){
             echo " Error al crear la sentencias ".$e->getMessage();
             exit();
@@ -63,11 +65,12 @@ class AccesoDatos {
         }
     }
 
-    //Devuelvo la lista de Dinosaurios
-    public function getDinosaurios ():array {
+    //Devuelvo la lista de Dinosaurios segun el tipo que sea(Terrestre,Acuatico o Volador),a la era que pertenezca y cantidad de votos
+    public function getDinosaurios ($tipo, $era):array {
         $tdinosaurio = [];
         $this->stmt_dinosaurios->setFetchMode(PDO::FETCH_CLASS, 'Dinosaurio');
-        
+        $this->stmt_dinosaurios->bindParam(':tipo_dinosaurio', $tipo);
+        $this->stmt_dinosaurios->bindParam(':nombre_era', $era);
         if ( $this->stmt_dinosaurios->execute() ){
             while ( $dinosaurio = $this->stmt_dinosaurios->fetch()){
                $tdinosaurio[]= $dinosaurio;
@@ -78,8 +81,7 @@ class AccesoDatos {
     
     //Dar de alta a un usuario
     public function addUsuario($user):bool{
-        
-        $this->stmt_creauser->execute( [$user->login, $user->nombre, $user->password, $user->comentario]);
+        $this->stmt_creauser->execute( [$user->nombre, $user->hash_contrasena, $user->correo]);
         $resu = ($this->stmt_creauser->rowCount () == 1);
         return $resu;
     }
@@ -89,7 +91,7 @@ class AccesoDatos {
         $user = false;
         
         $this->stmt_usuario->setFetchMode(PDO::FETCH_CLASS, 'Usuario');
-        $this->stmt_usuario->bindParam(':id', $login);
+        $this->stmt_usuario->bindParam(':nombre_usuario', $login);
         if ( $this->stmt_usuario->execute() ){
              if ( $obj = $this->stmt_usuario->fetch()){
                 $user= $obj;
@@ -97,19 +99,16 @@ class AccesoDatos {
         }
         return $user;
     }
-    
-    /*Votar por dinosaurio
+
+    //Votar por dinosaurio
     public function votarDinosaurio($usuario,$dinosaurio):bool{
-      
-        $this->stmt_moduser->bindValue(':login',$user->login);
-        $this->stmt_moduser->bindValue(':nombre',$user->nombre);
-        $this->stmt_moduser->bindValue(':password',$user->password);
-        $this->stmt_moduser->bindValue(':comentario',$user->comentario);
-        $this->stmt_moduser->execute();
-        $resu = ($this->stmt_moduser->rowCount () == 1);
+        $this->stmt_añadirvoto->bindParam(':id_usuario', $usuario->id);
+        $this->stmt_añadirvoto->bindParam(':id_dinosaurio', $dinosaurio->id);
+        $this->stmt_añadirvoto->execute();
+        $resu = ($this->stmt_añadirvoto->rowCount () == 1);
         return $resu;
     }
-*/
+
      // Evito que se pueda clonar el objeto
     public function __clone(){ 
         trigger_error('La clonación no permitida', E_USER_ERROR); 

@@ -21,6 +21,7 @@ CREATE TABLE Dinosaurio (
     agresividad INT NOT NULL,
     familia VARCHAR(50) NOT NULL,
     especie VARCHAR(100) NOT NULL,
+    tipo VARCHAR(20) NOT NULL,
     FOREIGN KEY (id_periodo) REFERENCES Periodo(id) ON DELETE RESTRICT
 );
 
