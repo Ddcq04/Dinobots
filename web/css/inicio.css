@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Roboto:wght@400;700&display=swap');
+
+.contenedorP {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --- SECCIÓN IZQUIERDA (VIDEOS) --- */
+.seccion-visual {
+    flex: 1; 
+    position: relative; /* Importante para que los videos se peguen aquí */
+    background: #000;
+    overflow: hidden;
+    border-right: 5px solid #8db600;
+}
+
+/* --- SECCIÓN DERECHA (LOGIN) --- */
+.seccion-login {
+    flex: 1; /* Toma el otro 50% */
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body {
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor general */
+.contenedor-videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lo subimos para que sea visible */
+}
+
+/* Estilo base para todos los videos */
+.video-dino {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Todos empiezan invisibles */
+    animation: secuenciaVideos 30s infinite; /* 30 segundos en total */
+}
+
+/* Control de tiempos (3 videos x 10 segundos = 30s) */
+#vid1 { 
+    animation-delay: 0s; 
+}
+#vid2 { 
+    animation-delay: 10s; 
+}
+#vid3 { 
+    animation-delay: 20s; 
+}
+#vid4 { 
+    animation-delay: 30s; 
+}
+
+/* La animación que los muestra y oculta */
+@keyframes secuenciaVideos {
+    0% { opacity: 0; }
+    5% { opacity: 1; }   /* Aparece suave */
+    30% { opacity: 1; }  /* Se mantiene (10 segundos de visibilidad) */
+    35% { opacity: 0; }  /* Desaparece suave */
+    100% { opacity: 0; }
+}
+
+/*formulario------------ */
+form {
+    background: #2b2b2b;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 8px solid #8db600; /* Verde lagarto */
+    border-right: 8px solid #8db600;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7), inset 0 0 10px rgba(141, 182, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Labels------------------------ */
+label {
+    font-family: 'Staatliches', cursive;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* inputs------------------ */
+input[type="text"],
+input[type="password"]{
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #1f1f1f;
+    color: #8db600;
+    box-sizing: border-box; /* input salga del borde*/
+    font-size: 1rem;
+    transition: all 0.3s;
+
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: #8db600;
+    border: none;
+    border-radius: 50px; /* Estilo cápsula */
+    color: #1a1a1a;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background: #a4d400;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #5d7800;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8db600;
+    box-shadow: 0 0 8px rgba(141, 182, 0, 0.5);
+    background: #252525;
+}
+
+
+input[type="submit"]:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #5d7800;
+}
+
+
+input[type="submit"]:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #5d7800;
+}
+
+
