@@ -28,6 +28,14 @@
 
         </div>
 
+        <?php
+            
+            include_once '/Dinobots/dat/inicio.php';
+            if (!empty($msg)) {
+                echo "<p style='color:red; text-align:center;'>$msg</p>";
+            }
+        ?>
+
 
         <div class="seccion-login">
             <form method="post" action="../dat/inicio.php">
