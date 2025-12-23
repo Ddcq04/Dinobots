@@ -12,7 +12,20 @@
    
 
     <form method="post" action="../dat/registro.php">
-         <label for="">Nombre de Usuario</label><br><input type="text" name="nombre" id="nombre"><br>
+
+        <?php
+            $msg = "";
+            if (isset($_GET['error'])) {
+                $msg = htmlspecialchars($_GET['error']);
+            }
+
+            if (!empty($msg)) {
+                echo "<p style='color:red; text-align:center;'>$msg</p>";
+            }
+            
+        ?>
+
+        <label for="">Nombre de Usuario</label><br><input type="text" name="nombre" id="nombre"><br>
         <label for="">Correo</label><br><input type="email" name="email" id="email"><br>
         <label for="">Contraseña</label><br><input type="password" name="clave" id="clave"><br>
        

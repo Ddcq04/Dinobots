@@ -154,6 +154,32 @@ input[type="submit"]:active {
     box-shadow: 0 2px 0 #5d7800;
 }
 
+.btn-registro {
+    display: inline-block;
+    text-decoration: none;
+    background: #8db600;
+    color: #1a1a1a;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-registro:hover {
+    background: #a4d400;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #5d7800;
+}
+
+.btn-registro:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #5d7800;
+}
+
 
 @media screen and (max-width: 903px) {
     /*  Quitamos el flex  */
