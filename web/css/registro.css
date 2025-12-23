@@ -1,11 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Roboto:wght@400;700&display=swap');
+@media screen and (max-width: 903px) {
 
+    body {
+        padding: 20px;
+        /* Margen de seguridad para bordes del móvil */
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        /*para que el formulario se centre vertical */
+        justify-content: center;
+
+    }
+
+    /*  formulario */
+    form {
+        width: 100%;
+        max-width: 380px;
+        /*estrechar */
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-sizing: border-box;
+    } 
+    
+}
+/* -------------------------------------------- */
 body {
     background: #1a1a1a;
-   background-image: url(../img/inicio/fondosesion.png);
+    background-image: url(../img/inicio/fondosesion.png);
     background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center;  
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
@@ -13,16 +38,17 @@ body {
     min-height: 100vh;
     margin: 0;
     color: #f0f0f0;
-   
+
 }
 
 form {
     background: #2b2b2b;
     padding: 40px;
     border-radius: 20px;
-    border-left: 8px solid #8db600; /* Verde lagarto */
-    border-right: 8px solid #8db600;
-    box-shadow: 0 0 25px rgba(0,0,0,0.7), inset 0 0 10px rgba(141, 182, 0, 0.2);
+    border-left: 8px solid hsl(131, 44%, 27%);
+    /* Verde lagarto */
+    border-right: 8px solid hsl(131, 44%, 27%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(141, 182, 0, 0.2);
     width: 100%;
     max-width: 400px;
     position: relative;
@@ -55,7 +81,7 @@ label {
 input[type="text"],
 input[type="date"],
 input[type="email"],
-input[type="password"]{
+input[type="password"] {
     width: 100%;
     padding: 12px;
     margin: 8px 0 18px 0;
@@ -63,7 +89,8 @@ input[type="password"]{
     border-radius: 5px;
     background: #1f1f1f;
     color: #8db600;
-    box-sizing: border-box; /* Evita que el input se salga del borde */
+    box-sizing: border-box;
+    /* Evita que el input se salga del borde */
     font-size: 1rem;
     transition: all 0.3s;
 }
@@ -82,7 +109,8 @@ input[type="submit"] {
     padding: 15px;
     background: #8db600;
     border: none;
-    border-radius: 50px; /* Estilo cápsula */
+    border-radius: 50px;
+    /* Estilo cápsula */
     color: #1a1a1a;
     font-family: 'Staatliches', cursive;
     font-size: 1.5rem;
@@ -102,5 +130,3 @@ input[type="submit"]:active {
     transform: translateY(3px);
     box-shadow: 0 2px 0 #5d7800;
 }
-
-
