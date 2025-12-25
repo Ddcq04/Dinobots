@@ -1,7 +1,4 @@
 <?php
-//PARTE ALEJANDRO
-
-
 class Usuario {
 
     private $id;
@@ -24,12 +21,5 @@ class Usuario {
             $this->$name = $value;
         }
     }
-
-
-
-
 }
-
-
-
 ?>
