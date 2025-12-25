@@ -10,43 +10,52 @@
 
 <body>
     <div class="contenedorP">
-        <div class="seccion-visual">
+        <div class="seccionvideo">
             <div class="contenedor-videos">
-                <video autoplay muted loop class="video-dino" id="vid1">
+                <video autoplay muted loop playsinline class="video-dino" id="vid1">
                     <source src="../web/videos/inicio1.mp4" type="video/mp4">
                 </video>
-                <video autoplay muted loop class="video-dino" id="vid2">
+                <video autoplay muted loop playsinline class="video-dino" id="vid2">
                     <source src="../web/videos/inicio2.mp4" type="video/mp4">
                 </video>
-                <video autoplay muted loop class="video-dino" id="vid3">
+                <video autoplay muted loop playsinline class="video-dino" id="vid3">
                     <source src="../web/videos/inicio3.mp4" type="video/mp4">
                 </video>
-                 <video autoplay muted loop class="video-dino" id="vid4">
+                <video autoplay muted loop playsinline class="video-dino" id="vid4">
                     <source src="../web/videos/inicio4.mp4" type="video/mp4">
                 </video>
             </div>
 
         </div>
 
-        <?php
-            
-            include_once '/Dinobots/dat/inicio.php';
-            if (!empty($msg)) {
-                echo "<p style='color:red; text-align:center;'>$msg</p>";
-            }
-        ?>
+      
 
 
-        <div class="seccion-login">
+
+        <div class="seccionlogin">
             <form method="post" action="../dat/inicio.php">
+
+                <?php
+                    $msg = "";
+                    if (isset($_GET['error'])) {
+                        $msg = htmlspecialchars($_GET['error']);
+                    }
+
+                    if (!empty($msg)) {
+                        echo "<p style='color:red; text-align:center;'>$msg</p>";
+                    }
+                ?>
                 <label for="">Usuario</label>
                 <input type="text" name="nombre" id="nombre"><br>
                 <label for="">Contraseña</label>
                 <input type="password" name="clave" id="clave">
                 <br>
                 <input type="submit" name="entrar" value="Entrar"><br>
-                <input type="submit" name="registrar" value="registrarse">
+
+                <a href="../layouts/registroform.php" class="btn-registro">Registrarse</a>
+
             </form>
+            
         </div>
 
     </div>

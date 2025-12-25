@@ -1,51 +1,4 @@
-/* ================================================= */
-/* === MEDIA QUERIES PARA ANCHO DE PANTALLA <= 903px === */
-/* ================================================= */
-
-@media (max-width: 903px) {
-
-
-  .slidbox ul li .boton {
-    /* Hacemos que la posición sea un poco menos extrema para que se vean */
-    top: 70%;
-    /* Mover el botón más abajo para que no choque con los títulos */
-    left: 5%;
-    /* Moverlo a la izquierda para dejar más margen */
-    font-size: 1.1rem;
-    /* Reducir el tamaño de la fuente */
-    max-width: 150px;
-    /* Asegurar que no se estiren demasiado si usamos VW */
-  }
-
-  /* Regla para los botones centrados (.boton.b1) */
-  .slidbox ul li .boton.b1 {
-    /* Si usaste translate para centrarlo, puede que solo necesites ajustar el top */
-    top: 75%;
-    /* Más abajo */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Mantener el centrado horizontal */
-  }
-
-  /* --- 3. AJUSTE DEL TEXTO PRINCIPAL (TXT) --- */
-  /* Aseguramos que el texto no desborde el contenedor */
-  .slidbox ul li .txt h2 {
-    font-size: 2.5rem;
-    /* Reducir el título principal */
-  }
-
-  .slidbox ul li .txt h3 {
-    font-size: 1.2rem;
-    /* Reducir el subtítulo */
-  }
-
-
-
-}
-
-
-
-/* ---------------------- */
+/* ----------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +8,6 @@
 }
 
 /* headerrr----------------------------------------------------- */
-
 header {
   background-color: hsl(131, 44%, 27%);
   width: 100%;
@@ -64,29 +16,10 @@ header {
   box-shadow: 34 56px 18px rgba(0, 0, 0, 0.3);
 
 }
-.usuario {
-    position: absolute; 
-    top: 20px;         
-    right: 30px;        
-    z-index: 100;       /* pone por encima de todo para que sea clicable */
-}
-
-.usuario img {
-    width: 2.7rem;      
-    height: auto;
-    cursor: pointer;    
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-.usuario img:hover {
-    transform: scale(1.3); 
-    
-}
 
 header h1 {
   font-family: "Bebas Neue", sans-serif;
-  text-align: center;
+  padding: 0px 11px 0px 13px;
   font-size: 2.3rem;
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -95,6 +28,41 @@ header h1 {
   z-index: 2;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 
+}
+
+/* logo con sus --------------------------------------- */
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.logo img {
+  width: 3rem;
+  height: auto;
+
+}
+
+/* -----usuario----------------------- */
+.usuario {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 100;
+  /* pone por encima de todo para que sea clicable */
+}
+
+.usuario img {
+  width: 2.7rem;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.usuario img:hover {
+  transform: scale(1.3);
 }
 
 /*barra de navegacion--------------------------------------------------*/
@@ -106,14 +74,6 @@ nav {
   margin: 0;
   padding: 1rem 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-  /* SOMBRA CON DEGRADADO */
-  /* background: linear-gradient(to bottom,
-      /* rgba(0, 0, 0, 0.6) 0%, */
-  /* apenas oscuro arriba */
-  /* rgba(0, 0, 0, 0) 100% 
-      transparente abajo 
-    ); */
 }
 
 
@@ -141,9 +101,7 @@ nav ul li {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   color: #fff;
-
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  /* sombrita */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1.5);
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
@@ -163,70 +121,150 @@ nav ul li a {
   display: inline-block;
 }
 
-/* MEDIAQUERIES NAVEGADOR HEADER */
-@media (max-width: 903px) {
+/* --- ocultar el check--- */
+#check {
+  display: none;
+}
 
-  header {
-    background-color: hsl(131, 44%, 27%);
-    width: 100%;
+.burger {
+  display: none;
+}
 
-    /* POSICION */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* ----------------------------- */
 
-    /* ALINEACIÓN (H1 IZQUIERDA, NAV DERECHA) */
+/* -media queries menu hamburguesa--- */
+@media (max-width: 997px) {
+
+.usuario {
+   position: absolute;
+        right: 12px; /* Igual espaciado que el menu hamburguesa */
+       
+    }
+
+    .usuario img {
+        /*  tamaño del usuario*/
+        width: 40px; 
+        height: auto;
+        display: block;
+    }
+    
+  .burger {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-
-    border-bottom: 3px solid rgb(255, 255, 255);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
-  }
-
-  /* --- 2. ACTIVACIÓN DEL MENÚ HAMBURGUESA --- */
-
-  .menu-icon {
-    display: flex;
-    /* Mostrar el icono */
     flex-direction: column;
-    justify-content: space-around;
+    gap: 5px;
+    /* separacion de entre las lineas */
     width: 30px;
-    height: 25px;
     cursor: pointer;
-    order: 2;
-    /* El icono a la derecha */
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    z-index: 1001;
+    /* para soperponer el menu */
   }
 
-  .nav-line {
-    display: block;
-    height: 3px;
-    background-color: white;
-    border-radius: 5px;
-  }
-
-  /* Ocultar la lista de navegación por defecto */
-  nav {
-    order: 3;
-    /* El menú aparece debajo de h1 y del icono */
+  /*líneas de la hamburguesa */
+  .burger span {
     width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
 
   }
 
+  /* Menú oculto lateralmente */
+  .enlaces {
+    position: fixed;
+    top: 20;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: hsl(131, 44%, 15%);
+    display: flex;
+    flex-direction: column;
+    /* enlace vertical */
+    align-items: center;
+    /* Centrado vertical */
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    /* quitamos espacio vertical entre los textos */
+    /* flex-wrap: nowrap ; */
+    /* Evitar que elementos se "salten" de línea */
+  }
 
+  /* Ajuste individual de los elementos de la lista */
+  .enlaces li {
+    margin: 15px 0;
+    /* espaciado uniforme*/
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
 
-  /* Menú vertical en móvil */
+  .enlaces li {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+  }
 
+  .enlaces li a {
+    /* links se vean uno abajo de otro */
+    font-size: 1.9rem;
+    display: block;
+    width: 100%;
+  }
 
-
+  /* acticavion del menu para ver enlaces*/
+  #check:checked~.enlaces {
+    left: 0;
+    /* se desplegue desde la izquierda */
+  }
 
 }
 
+
 /* slider------------------------------------------------------------ */
+/* -------mediaqueries slider */
+
+@media (max-width: 903px) {
+
+  .slidbox ul li .boton {
+    /* posición menos extrema para que se vean */
+    top: 70%;
+    /*botón más abajo pa que no choque con los títulos */
+    /* left: 5%; */
+    /* Mover a la izquierda para dejar más margen */
+    font-size: 1.1rem;
+    /* Reducir el tamaño de la fuente */
+    max-width: 150px;
+    /* Asegurar que no se estiren demasiado si usamos VW */
+  }
+
+  /*botones centrados */
+  .slidbox ul li .boton {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* centrar el boton horizontal */
+    /* Si usasamos translate para centrarlo necesitamos ajustar el top */
+  }
+
+  /* --texto----------- */
+  .slidbox ul li .txt h2 {
+    font-size: 2.2rem;
+    /* Reducir el tamaño el h2*/
+  }
+
+  .slidbox ul li .txt h3 {
+    font-size: 1.2rem;
+    /* Reducir de tamaño el h3*/
+  }
+
+
+}
 
 .slidbox {
   width: 100%;
@@ -291,7 +329,6 @@ nav ul li a {
   top: 45%;
   left: 35%;
   text-align: left;
-
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
@@ -317,11 +354,6 @@ nav ul li a {
 
 }
 
-.b1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
 
 .t3 {
 
@@ -364,40 +396,65 @@ nav ul li a {
 
 }
 
-
-
 .boton {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: white;
-  border: 1.5px solid;
-  border-radius: 6px;
-  background-color: lab(25.94% -20.65 14.23 / 0.8);
-  padding: 8px;
-  transition: transform 0.2s ease;
-  max-width: 10rem;
-  white-space: normal;
-  box-sizing: border-box;
+  z-index: 100;
+  /* Asegura que esté por encima de la imagen y el texto */
+  justify-content: space-between;
+
 }
 
 .boton a {
-  display: block;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: hsl(131, 44%, 27%);
+  /* Color verde visible */
+  color: white;
   text-decoration: none;
-  color: inherit;
-  white-space: normal;
-
+  border-radius: 20px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  display: block;
 }
 
-.boton:hover {
-  background-color: hsl(130, 35%, 20%);
+
+.boton a:hover {
   transform: scale(1.10);
 }
 
-.boton:active {
+.boton a:active {
   transform: scale(1.05);
+}
+
+.b1 {
+  top: auto;
+  bottom: 29%;
+  left: 10%;
+}
+
+.b2 {
+  top: auto;
+  bottom: 24%;
+  left: 40%;
+}
+
+.b3 {
+  top: auto;
+  bottom: 30%;
+  left: 45%;
+}
+
+.b5 {
+  top: auto;
+  bottom: 28%;
+  left: 45%;
+}
+
+.b6 {
+  top: auto;
+  bottom: 25%;
+  left: 45%;
 }
 
 @keyframes slide {
