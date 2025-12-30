@@ -40,15 +40,9 @@ class AccesoDatos {
         //Creacion y preparacion de las consultas
         $this->dbh->setAttribute( PDO::ATTR_EMULATE_PREPARES, FALSE );
         try {
-        $this->stmt_dinosaurios  = $this->dbh->prepare("
-        select e.nombre, d.*, count(v.id_dinosaurio) 
-        from Dinosaurio d 
-        join Periodo p on d.id_periodo = p.id
-        join Era e on e.id = p.id_era
-        join Voto v on d.id = v.id_dinosaurio
-        where d.tipo = :tipo_dinosaurio and e.nombre = :nombre_era
-        group by d.id
-        order by d.id");
+        $this->stmt_dinosaurios  = $this->dbh->prepare("select e.nombre, d.*, count(v.id_dinosaurio) from Dinosaurio d join Periodo p on d.id_periodo = p.id
+                                                        join Era e on e.id = p.id_era join Voto v on d.id = v.id_dinosaurio
+                                                        where d.tipo = :tipo_dinosaurio and e.nombre = :nombre_era group by d.id order by d.id");
         $this->stmt_creauser  = $this->dbh->prepare("insert into Usuario (nombre,hash_contrasena,correo) values(?,?,?)");
         $this->stmt_usuario   = $this->dbh->prepare("select * from Usuario where nombre = :nombre_usuario");
         $this->stmt_añadirvoto   = $this->dbh->prepare("insert into Voto (id_usuario, id_dinosaurio) values(:id_usuario, :id_dinosaurio)");

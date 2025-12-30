@@ -42,3 +42,12 @@ CREATE TABLE Voto (
 
 
 --INSERCION DE DATOS--
+INSERT INTO Era(nombre) VALUES ("Mesozoico"),("Cenozoico");
+INSERT INTO Periodo (nombre, id_era) VALUES 
+('Triásico', 1), 
+('Jurásico', 1), 
+('Cretácico', 1),
+('Paleógeno', 2),
+('Neógeno', 2),
+('Cuaternario', 2);
+
